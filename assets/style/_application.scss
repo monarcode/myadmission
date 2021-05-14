@@ -1,0 +1,58 @@
+.app-header {
+    min-height: 100vh;
+    background: var(--blue);
+    background: url(/assets/img/app-form-bg.jpg) no-repeat center/cover;
+    display: grid;
+    place-items: center;
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        color: var(--light);
+    }
+}
+
+.main-form {
+    min-height: 100vh;
+    position: relative;
+
+    &__wrapper {
+        min-height: 80vh;
+        background-color: #fff;
+        position: absolute;
+        top: -15%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 8px;
+        box-shadow: 0px 283px 277px rgba(118, 145, 149, 0.08), 0px 118.231px 115.724px rgba(118, 145, 149, 0.0575083), 0px 63.2118px 61.8716px rgba(118, 145, 149, 0.0476886), 0px 35.436px 34.6847px rgba(118, 145, 149, 0.04), 0px 18.8198px 18.4208px rgba(118, 145, 149, 0.0323114), 0px 7.83134px 7.6653px rgba(118, 145, 149, 0.0224916);
+        padding: 1.8rem;
+    }
+
+    &__title {
+        color: var(--blue);
+        text-align: center;
+        font-size: clamp(1.2rem, calc(2vw * 2), 3rem);
+        font-weight: bold;
+
+        span {
+            color: var(--yellow);
+        }
+    }
+
+    &__form {
+        margin-top: 5rem;
+    }
+
+    .select-css {
+        color: var(--grey) !important;
+    }
+}
+
+@media screen and (min-width: $md) {
+    .main-form {
+        &__wrapper {
+            padding: 4rem 2rem;
+            max-width: 50%;
+        }
+    }
+}

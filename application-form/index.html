@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/assets/style/select-css.css">
+    <link rel="stylesheet" href="/assets/style/main.css">
+    <title>MyAdmission Portal - Application form</title>
+</head>
+<body>
+    <nav id="navbar" class="navbar">
+        <div class="container">
+            <div class="navbar__logo">
+                <img src="/assets/img/logo-colored.png" alt="logo">
+            </div>
+
+            <div class="navbar__button">
+                <img src="/assets/img/menu-ic.svg" alt="menu">
+            </div>
+
+            <div class="navbar__links">
+                <a class="navbar__link" href="/">Home</a>
+                <a class="navbar__link" href="#">About Us</a>
+                <a class="navbar__link" href="#">Study Abroard</a>
+                <a class="navbar__link" href="#">Our Services</a>
+                <a class="navbar__link active" href="#">Application form</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- header section -->
+    <header id="header" class="app-header">
+        <div class="container app-header__content">
+            <h1>Application form</h1>
+        </div>
+    </header>
+
+    <!-- app form -->
+    <section class="main-form">
+        <div class="container main-form__wrapper">
+            <p class="main-form__title">
+                Please fill in your correct information below to get access to <span>FREE</span> Destination country catalogue & Consultation with our Student Counsellors(ICEF Certified).
+            </p>
+
+            <form action="" class="main-form__form">
+                <input type="email" name="email" id="email" class="form__control" placeholder="Email">
+
+                <input type="text" name="surname" id="surname" class="form__control" placeholder="Surname">
+
+                <input type="text" name="firstname" id="firstname" class="form__control" placeholder="First name">
+
+                <input type="phone" name="phone" id="phone" class="form__control" placeholder="Phone number">
+
+                <select class="select-css form__control" name="education" id="education">
+                    <option disabled selected>Highest level of qualification</option>
+                    <option value="O'level">O'Level</option>
+                    <option value="B.Sc">B.Sc</option>
+                    <option value="MSc">MSc</option>
+                    <option value="PhD">PhD</option>
+                    <option value="Others">Others</option>
+                </select>
+
+                <select class="select-css form__control" name="destination" id="destination">
+                    <option disabled selected>Study destination country</option>
+                    <option value="Canada">Canada</option>
+                    <option value="United kingdom">United kingdom</option>
+                    <option value="Australia">Australia</option>
+                    <option value="USA">USA</option>
+                    <option value="Europe">Europe</option>
+                </select>
+
+                <input type="text" name="history" id="history" class="form__control" placeholder="Do you have travel history?">
+
+                <button type="submit" class="cta form__cta">Submit <img src="/assets/img/check.svg" alt=""></button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <img src="/assets/img/Study design 1.svg" alt="" class="footer__logo">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            <div class="footer__links">
+                <a href="#" class="footer__link">Campaigns</a>
+                <a href="#" class="footer__link">Email marketing</a>
+                <a href="#" class="footer__link">Branding</a>
+                <a href="#" class="footer__link">Offline</a>
+                <a href="#" class="footer__link">FAQs</a>
+            </div>
+            <div class="footer__socials">
+                <a href="#" class="footer__social"><img src="/assets/img/001-facebook.svg" alt=""></a>
+                <a href="#" class="footer__social"><img src="/assets/img/004-instagram.svg" alt=""></a>
+                <a href="#" class="footer__social"><img src="/assets/img/003-twitter.svg" alt=""></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="/assets/js/jquery.waypoints.min.js"></script>
+    <script src="/assets/js/jquery.counterup.min-old.js"></script>
+    <script src="/assets/js/app.js"></script>
+
+    <script>
+        jQuery(document).ready(function($) {
+            $('.counter').counterUp({
+                delay: 10,
+                time: 5000
+            });
+        });
+
+    </script>
+</body>
+</html>
