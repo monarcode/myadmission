@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../assets/style/select-css.css">
+    <link rel="stylesheet" href="../assets/style/main.css">
+    <title>MyAdmission Portal - Purchase form</title>
+</head>
+<body>
+    <nav id="navbar" class="navbar">
+        <div class="container">
+            <div class="navbar__logo">
+                <img src="../assets/img/logo-colored.png" alt="logo">
+            </div>
+
+            <div class="navbar__button">
+                <img src="../assets/img/menu-ic.svg" alt="menu">
+            </div>
+
+            <div class="navbar__links">
+                <a class="navbar__link" href="../">Home</a>
+                <a class="navbar__link" href="#">About Us</a>
+                <a class="navbar__link" href="#">Study Abroard</a>
+                <a class="navbar__link" href="#">Our Services</a>
+                <a class="navbar__link active" href="#">Application form</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- header section -->
+    <header id="header" class="app-header">
+        <div class="container app-header__content">
+            <h1>Purchase form</h1>
+        </div>
+    </header>
+
+    <!-- purchase form -->
+    <section class="main-form purchaseForm">
+        <div class="container main-form__wrapper">
+            <p class="main-form__title">
+                Select the offer you want to purchase</span>
+            </p>
+
+            <div class="purchaseForm__wrapper remove">
+                <form action="" class="main-form__form" id="purchaseForm__form">
+    
+                    <select class="select-css form__control" name="countrySelect" id="countrySelect">
+                        <option disabled selected>Which country are you processing?</option>
+                        <option value="O'level">Canada</option>
+                        <option value="B.Sc">UK</option>
+                        <option value="MSc">Australia</option>
+                        <option value="PhD">USA</option>
+                        <option value="Others">Europe</option>
+                    </select>
+    
+                    <select class="select-css form__control" name="serviceSelect" id="serviceSelect">
+                        <option disabled selected>Which service are you paying for?</option>
+                        <option value="Canada">Visa processing</option>
+                        <option value="United kingdom">Admission processing</option>
+                    </select>
+    
+                    <select class="select-css form__control" name="levelSelect" id="levelSelect">
+                        <option disabled selected>What academic level are you applying for?</option>
+                        <option value="Canada">Undergraduate Application</option>
+                        <option value="United kingdom">postgraduate Application</option>
+                    </select>
+    
+                    <button type="submit" class="cta form__cta" id="next">Next <img src="../assets/img/chevron-right-2.svg" alt=""></button>
+                </form>
+            </div>
+
+            <div class="purchaseForm__summary">
+                <div class="purchaseForm__header">
+                    <div class="purchaseForm__selection">
+                        <img src="../assets/img/flags/066-canada.png" alt="flag" class="purchaseForm__flag" id="purchaseForm__flag">
+                        <div class="purchaseForm__info">
+                            <h3>Canada</h3>
+                            <span><p>Postgraduate </p> - <p> Admission processing</p></span>
+                        </div>
+                    </div>
+
+                    <div class="purchaseForm__price">
+                        <p>₦70,000</p>
+                    </div>
+                </div>
+
+                <div class="purchaseForm__notif">
+                    <p>Payment can be made in 2 installments, 35k to start processing and 35k when admission letter is out</p>
+                </div>
+
+                <div class="purchaseForm__wyg">
+                    <h3 class="purchaseForm__wyg-title">What you get</h3>
+
+                    <ul class="purchaseForm__list americas" id="americas">
+                        <li class="purchaseForm__list-item">Profiling  and Academic Evaluation</li>
+                        <li class="purchaseForm__list-item">One Free Statement of Purpose </li>
+                        <li class="purchaseForm__list-item">Maximum of two applications</li>
+                        <li class="purchaseForm__list-item">Access to our Certified Student Counsellors</li>
+                        <li class="purchaseForm__list-item">Course Selection</li>
+                        <li class="purchaseForm__list-item">University Selection</li>
+                        <li class="purchaseForm__list-item">Documentation</li>
+                        <li class="purchaseForm__list-item">Filling of  Admission Application Forms</li>
+                    </ul>
+                </div>
+
+                <div class="purchaseForm__action">
+                    <a href="#" class="cta tetiary">Go back</a>
+                    <a class="cta">Submit</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <img src="../assets/img/Study design 1.svg" alt="" class="footer__logo">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            <div class="footer__links">
+                <a href="#" class="footer__link">Campaigns</a>
+                <a href="#" class="footer__link">Email marketing</a>
+                <a href="#" class="footer__link">Branding</a>
+                <a href="#" class="footer__link">Offline</a>
+                <a href="#" class="footer__link">FAQs</a>
+            </div>
+            <div class="footer__socials">
+                <a href="#" class="footer__social"><img src="../assets/img/001-facebook.svg" alt=""></a>
+                <a href="#" class="footer__social"><img src="../assets/img/004-instagram.svg" alt=""></a>
+                <a href="#" class="footer__social"><img src="../assets/img/003-twitter.svg" alt=""></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="../assets/js/jquery.waypoints.min.js"></script>
+    <script src="../assets/js/jquery.counterup.min-old.js"></script>
+    <script src="../assets/js/app.js"></script>
+
+    <script>
+        jQuery(document).ready(function($) {
+            $('.counter').counterUp({
+                delay: 10,
+                time: 5000
+            });
+        });
+
+    </script>
+</body>
+</html>

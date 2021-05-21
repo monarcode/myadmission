@@ -1,0 +1,90 @@
+.purchaseForm {
+    position: relative;
+    min-height: 110vh;
+
+    .main-form__wrapper {
+        padding: 4rem;
+    }
+
+    .main-form__title {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    &__wrapper {
+        display: block;
+
+        &.remove {
+            display: none;
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    &__selection {
+        display: flex;
+        align-items: center;
+    }
+
+    &__flag {
+        max-width: 60px;
+        height: 60px;
+        margin-right: 1rem;
+    }
+
+    &__info {
+        span {
+            display: flex;
+            color: var(--grey);
+        }
+
+        h3 {
+            color: var(--dark);
+            font-size: clamp(2rem, calc(3vw-1rem), 4rem);
+        }
+    }
+
+    &__price {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--dark);
+    }
+
+    &__notif {
+        margin: 5rem 0;
+        background-color: hsla(194, 81%, 33%, 0.1);
+        padding: 1rem 3rem;
+        border-radius: 30px;
+        width: 100%;
+        color: var(--blue);
+        text-align: center;
+    }
+
+    &__wyg {
+        &-title {
+            color: var(--dark);
+            font-size: clamp(2rem, calc(3vw-1rem), 4rem);
+        }
+    }
+
+    &__list {
+        list-style: none;
+        list-style-image: url(../img/box.svg);
+        list-style-position: inside;
+
+        &-item {
+            margin: 2rem 0;
+        }
+    }
+
+    &__action {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3rem;
+    }
+}
