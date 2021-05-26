@@ -15,18 +15,34 @@
             <div class="navbar__logo">
                 <img src="../assets/img/logo-colored.png" alt="logo">
             </div>
-
+  
             <div class="navbar__button">
                 <img src="../assets/img/menu-ic.svg" alt="menu">
             </div>
-
-            <div class="navbar__links">
-                <a class="navbar__link" href="../">Home</a>
-                <a class="navbar__link" href="#">About Us</a>
-                <a class="navbar__link" href="#">Study Abroard</a>
-                <a class="navbar__link" href="#">Our Services</a>
-                <a class="navbar__link active" href="#">Application form</a>
-            </div>
+  
+            <ul class="navbar__links">
+                <li class="navbar__link">
+                    <a class="active" href="../">Home</a>
+                </li>
+                <li class="navbar__link">
+                    <a class="active" href="../about/">About</a>
+                </li>
+                <li class="navbar__link catalogue">
+                    <a class="active" href="">Study abroad <img src="../assets/img/chevron-down-2.svg" alt="" class="drop-ind"></a>
+                    <div class="navbar__dropWrapper">
+                        <ul class="dropdown__list">
+                            <li><a href="#">Canada</a></li>
+                            <li><a href="#">UK</a></li>
+                            <li><a href="#">Poland</a></li>
+                            <li><a href="#">USA</a></li>
+                            <li><a href="#">Australia</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="navbar__link">
+                    <a class="active" href="#">Application form</a>
+                </li>
+            </ul>
         </div>
     </nav>
 

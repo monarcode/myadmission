@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../assets/style/select-css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../assets/style/notif.css">
     <link rel="stylesheet" href="../assets/style/main.css">
     <title>MyAdmission Portal - Purchase form</title>
 </head>
@@ -15,25 +17,41 @@
             <div class="navbar__logo">
                 <img src="../assets/img/logo-colored.png" alt="logo">
             </div>
-
+  
             <div class="navbar__button">
                 <img src="../assets/img/menu-ic.svg" alt="menu">
             </div>
-
-            <div class="navbar__links">
-                <a class="navbar__link" href="../">Home</a>
-                <a class="navbar__link" href="#">About Us</a>
-                <a class="navbar__link" href="#">Study Abroard</a>
-                <a class="navbar__link" href="#">Our Services</a>
-                <a class="navbar__link active" href="#">Application form</a>
-            </div>
+  
+            <ul class="navbar__links">
+                <li class="navbar__link">
+                    <a class="active" href="../">Home</a>
+                </li>
+                <li class="navbar__link">
+                    <a class="active" href="../about/">About</a>
+                </li>
+                <li class="navbar__link catalogue">
+                    <a class="active" href="">Study abroad <img src="../assets/img/chevron-down-2.svg" alt="" class="drop-ind"></a>
+                    <div class="navbar__dropWrapper">
+                        <ul class="dropdown__list">
+                            <li><a href="../study-abroad/canada.html">Canada</a></li>
+                            <li><a href="../study-abroad/uk.html">UK</a></li>
+                            <li><a href="../study-abroad/poland.html">Poland</a></li>
+                            <li><a href="../study-abroad/usa.html">USA</a></li>
+                            <li><a href="../study-abroad/australia.html">Australia</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="navbar__link">
+                    <a class="active" href="../application-form/">Application form</a>
+                </li>
+            </ul>
         </div>
     </nav>
 
     <!-- header section -->
-    <header id="header" class="app-header">
+    <header id="header" class="app-header purchase">
         <div class="container app-header__content">
-            <h1>Purchase form</h1>
+            <h1>Purchasing fee</h1>
         </div>
     </header>
 
@@ -44,75 +62,136 @@
                 Select the offer you want to purchase</span>
             </p>
 
-            <div class="purchaseForm__wrapper remove">
-                <form action="" class="main-form__form" id="purchaseForm__form">
+            <div class="form__wrap">    
+                <div class="purchaseForm__wrapper">
+                    <div class="main-form__form" id="purchaseForm__form">
+        
+                        <select class="select-css form__control" name="countrySelect" id="countrySelect">
+                            <option disabled selected>Which country are you processing?</option>
+                            <option value="Canada">Canada</option>
+                            <option value="UK">UK</option>
+                            <option value="Australia">Australia</option>
+                            <option value="USA">USA</option>
+                            <option value="Europe">Europe</option>
+                        </select>
+        
+                        <select class="select-css form__control" name="serviceSelect" id="serviceSelect">
+                            <option disabled selected>Which service are you paying for?</option>
+                            <option value="Visa">Visa processing</option>
+                            <option value="Admission">Admission processing</option>
+                        </select>
+        
+                        <select class="select-css form__control" name="levelSelect" id="levelSelect">
+                            <option disabled selected>What academic level are you applying for?</option>
+                            <option value="Undergraduate">Undergraduate Application</option>
+                            <option value="Postgraduate">Postgraduate Application</option>
+                        </select>
+        
+                        <a href="#" id="submitNext" class="cta form__cta purchaseForm__nex">Next <img src="../assets/img/chevron-right-2.svg" alt=""></a>
+                    </div>
+                </div>
     
-                    <select class="select-css form__control" name="countrySelect" id="countrySelect">
-                        <option disabled selected>Which country are you processing?</option>
-                        <option value="O'level">Canada</option>
-                        <option value="B.Sc">UK</option>
-                        <option value="MSc">Australia</option>
-                        <option value="PhD">USA</option>
-                        <option value="Others">Europe</option>
-                    </select>
+                <div id="purchaseForm__summary" class="purchaseForm__summary remove">
+                    <div class="purchaseForm__header">
+                        <div class="purchaseForm__selection">
+                            <img src="../assets/img/flags/Canada.png" alt="flag" class="purchaseForm__flag" id="purchaseForm__flag">
+                            <div class="purchaseForm__info">
+                                <h3 id="countryName" class="countryName"></h3>
+                                <span><p id="levelName" class="levelName"></p> - <p id="serviceName" class="serviceName"></p></span>
+                            </div>
+                        </div>
     
-                    <select class="select-css form__control" name="serviceSelect" id="serviceSelect">
-                        <option disabled selected>Which service are you paying for?</option>
-                        <option value="Canada">Visa processing</option>
-                        <option value="United kingdom">Admission processing</option>
-                    </select>
-    
-                    <select class="select-css form__control" name="levelSelect" id="levelSelect">
-                        <option disabled selected>What academic level are you applying for?</option>
-                        <option value="Canada">Undergraduate Application</option>
-                        <option value="United kingdom">postgraduate Application</option>
-                    </select>
-    
-                    <button type="submit" class="cta form__cta" id="next">Next <img src="../assets/img/chevron-right-2.svg" alt=""></button>
-                </form>
-            </div>
-
-            <div class="purchaseForm__summary">
-                <div class="purchaseForm__header">
-                    <div class="purchaseForm__selection">
-                        <img src="../assets/img/flags/066-canada.png" alt="flag" class="purchaseForm__flag" id="purchaseForm__flag">
-                        <div class="purchaseForm__info">
-                            <h3>Canada</h3>
-                            <span><p>Postgraduate </p> - <p> Admission processing</p></span>
+                        <div class="purchaseForm__price">
+                            <p id="paymentAmount" class="paymentAmount"> </p>
                         </div>
                     </div>
+    
+                    <div class="purchaseForm__notif">
+                        <p>Payment can be made in 2 installments, 35k to start processing and 35k when admission letter is out</p>
+                    </div>
+    
+                    <div class="purchaseForm__wyg">
+                        <h3 class="purchaseForm__wyg-title">What you get</h3>
+    
+                        <!-- americas -->
+                        <ul class="purchaseForm__list americas-admission" id="americas-admission">
+                            <li class="purchaseForm__list-item">Profiling  and Academic Evaluation</li>
+                            <li class="purchaseForm__list-item">One Free Statement of Purpose </li>
+                            <li class="purchaseForm__list-item">Maximum of two applications</li>
+                            <li class="purchaseForm__list-item">Access to our Certified Student Counsellors</li>
+                            <li class="purchaseForm__list-item">Course Selection</li>
+                            <li class="purchaseForm__list-item">University Selection</li>
+                            <li class="purchaseForm__list-item">Documentation</li>
+                            <li class="purchaseForm__list-item">Filling of  Admission Application Forms</li>
+                        </ul>
+                        <ul class="purchaseForm__list americas-visa" id="americas-visa">
+                            <li class="purchaseForm__list-item">Visa Guidance</li>
+                            <li class="purchaseForm__list-item">Visa Letter of Explanation </li>
+                            <li class="purchaseForm__list-item">Filling of Visa forms</li>
+                            <li class="purchaseForm__list-item">Payment Guidance</li>
+                            <li class="purchaseForm__list-item">Accomodation/Hostel Booking</li>
+                            <li class="purchaseForm__list-item">Guidance on flight Booking, Pre-depature & Insurance booking</li>
+                        </ul>
 
-                    <div class="purchaseForm__price">
-                        <p>₦70,000</p>
+                        <!-- uk -->
+                        <ul class="purchaseForm__list uk-visa" id="uk-visa">
+                            <li class="purchaseForm__list-item">Visa Guidance</li>
+                            <li class="purchaseForm__list-item">Visa Letter of Explanation </li>
+                            <li class="purchaseForm__list-item">Guidance on proof of funds needed</li>
+                            <li class="purchaseForm__list-item">Documentation</li>
+                            <li class="purchaseForm__list-item">Filling of Visa forms</li>
+                            <li class="purchaseForm__list-item">Payment Guidance</li>
+                            <li class="purchaseForm__list-item">Accomodation/Hostel Booking</li>
+                            <li class="purchaseForm__list-item">Guidance on flight Booking, Pre-depature & Insurance booking</li>
+                        </ul>
+                        <ul class="purchaseForm__list uk-admission" id="uk-admission">
+                            <li class="purchaseForm__list-item">Profiling  and Academic Evaluation</li>
+                            <li class="purchaseForm__list-item">One Free Statement of Purpose </li>
+                            <li class="purchaseForm__list-item">Maximum of two applications</li>
+                            <li class="purchaseForm__list-item">Access to our Certified Student Counsellors</li>
+                            <li class="purchaseForm__list-item">Course Selection</li>
+                            <li class="purchaseForm__list-item">University Selection</li>
+                            <li class="purchaseForm__list-item">Documentation</li>
+                            <li class="purchaseForm__list-item">Filling of  Admission Application Forms</li>
+                            <li class="purchaseForm__list-item">Scholarship & funding Application as applicable</li>
+                        </ul>
+
+                        <!-- aus -->
+                        <ul class="purchaseForm__list aus-visa" id="aus-visa">
+                            <li class="purchaseForm__list-item">Visa Guidance</li>
+                            <li class="purchaseForm__list-item">Visa Letter of Explanation </li>
+                            <li class="purchaseForm__list-item">Guidance on proof of funds needed</li>
+                            <li class="purchaseForm__list-item">Filling of Visa forms</li>
+                            <li class="purchaseForm__list-item">Payment Guidance</li>
+                            <li class="purchaseForm__list-item">Accomodation/Hostel Booking</li>
+                            <li class="purchaseForm__list-item">Guidance on flight Booking, Pre-depature & Insurance booking</li>
+                        </ul>
+                        <ul class="purchaseForm__list aus-admission" id="aus-admission">
+                            <li class="purchaseForm__list-item">Profiling  and Academic Evaluation</li>
+                            <li class="purchaseForm__list-item">Preparation for genuine temporary entrant questions</li>
+                            <li class="purchaseForm__list-item">One Free Statement of Purpose </li>
+                            <li class="purchaseForm__list-item">Maximum of two applications</li>
+                            <li class="purchaseForm__list-item">Access to our Certified Student Counsellors</li>
+                            <li class="purchaseForm__list-item">Course Selection</li>
+                            <li class="purchaseForm__list-item">University Selection</li>
+                            <li class="purchaseForm__list-item">Documentation</li>
+                            <li class="purchaseForm__list-item">Filling of  Admission Application Forms</li>
+                            <li class="purchaseForm__list-item">Scholarship & funding Application as applicable</li>
+                        </ul>
+                    </div>
+    
+                    <div class="purchaseForm__action">
+                        <a href="#" class="cta tetiary">Refresh page</a>
+                        <a class="cta pay__btn" id="pay__btn">Pay now</a>
                     </div>
                 </div>
-
-                <div class="purchaseForm__notif">
-                    <p>Payment can be made in 2 installments, 35k to start processing and 35k when admission letter is out</p>
-                </div>
-
-                <div class="purchaseForm__wyg">
-                    <h3 class="purchaseForm__wyg-title">What you get</h3>
-
-                    <ul class="purchaseForm__list americas" id="americas">
-                        <li class="purchaseForm__list-item">Profiling  and Academic Evaluation</li>
-                        <li class="purchaseForm__list-item">One Free Statement of Purpose </li>
-                        <li class="purchaseForm__list-item">Maximum of two applications</li>
-                        <li class="purchaseForm__list-item">Access to our Certified Student Counsellors</li>
-                        <li class="purchaseForm__list-item">Course Selection</li>
-                        <li class="purchaseForm__list-item">University Selection</li>
-                        <li class="purchaseForm__list-item">Documentation</li>
-                        <li class="purchaseForm__list-item">Filling of  Admission Application Forms</li>
-                    </ul>
-                </div>
-
-                <div class="purchaseForm__action">
-                    <a href="#" class="cta tetiary">Go back</a>
-                    <a class="cta">Submit</a>
-                </div>
             </div>
+
         </div>
     </section>
+
+    <!-- toast notif for err -->
+    <div id="toast"><div id="img"><i class="fas fa-exclamation-triangle"></i></div><div id="desc">PLease select all 3 fields to proceed</div></div>
 
     <footer class="footer">
         <div class="container">
