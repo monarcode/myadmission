@@ -182,10 +182,8 @@ $(document).ready(function($){
     $("#submitNext").click(function(e){
         e.preventDefault();
         if(!selectedCountry || !selectedLevel || !selectedService){
-                // console.log('not submitted oo, no data');
                 launch_toast();
         } else {
-            // console.log('submited');
 
             // go to next
             goNext();
