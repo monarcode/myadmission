@@ -6,8 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./assets/style/select-css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/style/zoom.css">
     <link rel="stylesheet" href="./assets/style/main.css">
+    <style>
+            img[data-action="zoom"] {
+            cursor: pointer;
+            cursor: -webkit-zoom-in;
+            cursor: -moz-zoom-in;
+        }
+        .zoom-img,
+        .zoom-img-wrap {
+            position: relative !important;
+            z-index: 666 !important;
+            -webkit-transition: all 300ms !important;
+                -o-transition: all 300ms !important;
+                    transition: all 300ms !important;
+        }
+        img.zoom-img {
+            cursor: pointer !important;
+            cursor: -webkit-zoom-out !important;
+            cursor: -moz-zoom-out !important;
+        }
+        .zoom-overlay {
+            z-index: 420 !important;
+            background: #fff !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            pointer-events: none !important;
+            filter: "alpha(opacity=0)" !important;
+            opacity: 0 !important;
+            -webkit-transition:      opacity 300ms !important;
+                -o-transition:      opacity 300ms !important;
+                    transition:      opacity 300ms !important;
+        }
+        .zoom-overlay-open .zoom-overlay {
+            filter: "alpha(opacity=100)";
+            opacity: 1 !important;
+        }
+        .zoom-overlay-open,
+        .zoom-overlay-transitioning {
+            cursor: default !important;
+        }
+    </style>
     <title>MyAdmission Portal</title>
 </head>
 <body>
@@ -252,7 +297,7 @@
             <h2 class="title">Testimonials</h2>
             <p class="sub-title">What our customers have to say</p>
         </div>
-        <div class="container testimonials__wrapper">
+        <div class="karousel container testimonials__wrapper">
             <div class="testimonials__image">
                 <img src="./assets/img/1.JPG" alt="" data-action="zoom">
             </div>
@@ -291,17 +336,32 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="./assets/js/jquery.waypoints.min.js"></script>
     <script src="./assets/js/jquery.counterup.min-old.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./assets/js/transition.js"></script>
     <script src="./assets/js/zoom.js"></script>
     <script src="./assets/js/app.js"></script>
 
     <script>
         jQuery(document).ready(function($) {
+            const width = document
             $('.counter').counterUp({
                 delay: 10,
                 time: 5000
             });
         });
+
+        if ( $(window).width() < 564 ) {
+            
+            $('.karousel').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            dots: true,
+            });
+
+        }
 
     </script>
 </body>
