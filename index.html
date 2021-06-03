@@ -348,20 +348,20 @@
                 delay: 10,
                 time: 5000
             });
+
+            if (screen.width <= 590){
+
+                $('.karousel').slick({
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 3000,
+                    dots: true,
+                });
+            }
+
         });
-
-        if ( $(window).width() < 564 ) {
-            
-            $('.karousel').slick({
-            infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 3000,
-            dots: true,
-            });
-
-        }
 
     </script>
 </body>
