@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/style/zoom.css">
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <link rel="stylesheet" href="./assets/style/main.css">
     <style>
             img[data-action="zoom"] {
@@ -195,6 +196,24 @@
         </div>
     </section>
 
+    <!-- poster ad -->
+    <section id="poster" class="poster">
+        <div class="container poster__wrap">
+            <div class="poster__image set-1">
+                <a href="" class="poster__link"></a>
+            </div>
+            <div class="poster__image set-2">
+                <a href="" class="poster__link"></a>
+            </div>
+            <div class="poster__image set-3">
+                <a href="" class="poster__link"></a>
+            </div>
+            <div class="poster__image set-4">
+                <a href="" class="poster__link"></a>
+            </div>
+        </div>
+    </section>
+
     <!-- procedure -->
     <section class="procedure">
         <div class="container procedure__heading">
@@ -361,8 +380,17 @@
                 });
             }
 
+            $('.poster__wrap').slick({
+                arrows: true,
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                speed: 100,
+                slidesToShow: 1,
+                fade: true,
+                cssEase: 'ease-out'
+            });
         });
-
     </script>
 </body>
 </html>

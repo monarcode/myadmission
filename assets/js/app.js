@@ -239,5 +239,6 @@ $(document).ready(function($){
         setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
     }
 
-    // carousel
+    // poster carousel
+    
 });
