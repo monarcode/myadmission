@@ -571,7 +571,7 @@
       }
 
       &.active::before {
-        content: "";
+        content: '';
         width: 6px;
         height: 6px;
         background-color: var(--yellow);
@@ -629,7 +629,7 @@
     background-attachment: fixed;
 
     &::before {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       background-color: #107999b2;
@@ -711,7 +711,7 @@
 
       img {
         &::before {
-          content: "";
+          content: '';
           background-color: red;
           width: 90px;
           height: 90px;
@@ -727,7 +727,7 @@
       }
 
       &::before {
-        content: "";
+        content: '';
         display: block;
         width: 200px;
         height: 200px;
@@ -740,7 +740,7 @@
         border-radius: 0 45px 0 0;
       }
       &::after {
-        content: "";
+        content: '';
         display: block;
         width: 200px;
         height: 200px;
